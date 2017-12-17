@@ -11,5 +11,9 @@ def main_page():
 def favicon():
     return static_file("static/favicon.ico", root=bottle_app_dir)
 
+@route('/static/<path:re:.+>', name='static')
+def static(path):
+    return static_file(path, root=os.path.join(bottle_app_dir, 'static'))
+
 application = default_app()
 
