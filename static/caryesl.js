@@ -12,13 +12,13 @@ function open_section (nav_item)
 	var item = nav_item.replace("_mobile", "");
 	switch (item) {
 		case "about":
-			main_section.html("<h1>Who is George?</h1><img src='/static/caryesl_students.jpg'>");
+			main_section.load("static/about.html");
 			break;
 		case "material":
 			main_section.html("<h1>George can teach you A LOT!</h1>");
 			break;
 		case "timetable":
-			main_section.html("<h1>George has no time to teach you.</h1>");
+			main_section.html("<h1>Contact George in order to find out the relevant timetable.</h1>");
 			break;
 		case "contacts":
 			main_section.html("<h1>How can I reach George?</h1><a href=\"mailto:georgemartin11@hotmail.com?subject=Feedback\">georgemartin11@hotmail.com</a>");
@@ -27,7 +27,7 @@ function open_section (nav_item)
 			main_section.html("<h1>No promotional offers at the moment...</h1>");
 			break;
 		case "test":
-			main_section.html("<h1>I can see that your English is bad. Study with me!</h1>");
+			main_section.html("<h1>Under construction...</h1>");
 			break;
 		default:
 			console.log("Unexpected item in open_section():", item);

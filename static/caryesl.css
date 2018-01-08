@@ -4,6 +4,20 @@ html, body {
 	height: 100%;
 	overflow: hidden;
 }
+
+section {
+	float: left;
+	width: 60%;
+	height: 93vh;
+	text-align: center;
+	overflow-y: auto;
+}
+
+img {
+	max-width: 100%;
+	max-height: 99.5%;
+}
+
 div.container {
 	margin: 0;
 	padding: 0;
@@ -19,6 +33,20 @@ div.header {
 	left: 10vw;
 	width: 80vw;
 	cursor: pointer;
+}
+
+div.section_content {
+	margin: 1vw;
+	text-align: justify;
+	text-justify: inter-word;
+	font-size: 2vh;
+}
+
+div.section_content > img {
+	margin: 1vw;
+	max-width: 60%;
+	max-height: 80%;
+	float: right;
 }
 
 h1.header {
@@ -144,23 +172,9 @@ li a:hover:not(.active) {
 	color: white;
 }
 
-section {
-	float: left;
-	width: 60%;
-	height: 93vh;
-	text-align: center;
-	overflow-y: auto;
-}
-
-img {
-	max-width: 100%;
-	max-height: 99.5%;
-}
-
 @media screen and (max-aspect-ratio: 4/5)
 {
-	nav
-	{
+	nav	{
 		display: none;
 	}
 	section {
@@ -171,5 +185,14 @@ img {
 	}
 	.mobile_menu {
 		display: inline;
+	}
+	div.section_content	{
+		font-size: 3vh
+	}
+	div.section_content > img {
+		margin: 1vw;
+		max-width: 100%;
+		max-height: 100%;
+		float: none;
 	}
 }
