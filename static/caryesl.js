@@ -10,7 +10,6 @@ function open_section (nav_item)
 {
 	var main_section = $("#main_section");
 	var item = nav_item.replace("_mobile", "");
-	console.log(item);
 	switch (item) {
 		case "about":
 			main_section.html("<h1>Who is George?</h1><img src='/static/caryesl_students.jpg'>");
@@ -30,7 +29,11 @@ function open_section (nav_item)
 		case "test":
 			main_section.html("<h1>I can see that your English is bad. Study with me!</h1>");
 			break;
+		default:
+			console.log("Unexpected item in open_section():", item);
+			item = null;
 	}
+	return item;
 }
 
 $(function() {
@@ -41,10 +44,18 @@ $(function() {
 		open_section(nav_item);
 	});
 	$("#main_side_nav a").click(function() {
-		var nav_item = $(this).attr("id");
-		open_section(nav_item);
+		if ($(this).hasClass("closebtn")) {
+			close_nav();
+		} else {
+			var item = open_section($(this).attr("id"));
+			if (item != null) {
+				$("li a").removeClass("active");
+				$("#"+item).addClass("active");
+				close_nav();
+			}
+		}
 	});
-	$("#main_header").click(function() {
+	$("div.header").click(function() {
 		$("li a").removeClass("active");
 		var main_section = $("#main_section");
 		main_section.html("<img src='/static/caryesl.jpg'>");

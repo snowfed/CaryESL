@@ -11,6 +11,16 @@ div.container {
 	height: 100%;
 }
 
+div.header {
+	margin-top: 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 10vw;
+	width: 80vw;
+	cursor: pointer;
+}
+
 h1.header {
 	margin-top: 0;
 	margin: 0;
@@ -58,6 +68,7 @@ header {
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding-top: 60px;
+	display: none;
 }
 
 .sidenav a {
@@ -119,6 +130,8 @@ li a {
 	color: #000;
 	text-decoration: none;
 	vertical-align: middle;
+	font-size: 1.75vw;
+	text-align: center;
 }
 
 li a.active {
@@ -152,6 +165,9 @@ img {
 	}
 	section {
 		width: 100%;
+	}
+	.sidenav {
+		display: inline;
 	}
 	.mobile_menu {
 		display: inline;
