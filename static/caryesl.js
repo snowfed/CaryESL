@@ -15,13 +15,13 @@ function open_section (nav_item)
 			main_section.load("static/about.html");
 			break;
 		case "material":
-			main_section.html("<h1>George can teach you A LOT!</h1>");
+			main_section.load("static/material.html");
 			break;
 		case "timetable":
-			main_section.html("<h1>Contact George in order to find out the relevant timetable.</h1>");
+			main_section.load("static/timetable.html");
 			break;
 		case "contacts":
-			main_section.html("<h1>How can I reach George?</h1><a href=\"mailto:georgemartin11@hotmail.com?subject=Feedback\">georgemartin11@hotmail.com</a>");
+			main_section.load("static/contacts.html");
 			break;
 		case "promo":
 			main_section.html("<h1>No promotional offers at the moment...</h1>");

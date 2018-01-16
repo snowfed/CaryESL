@@ -39,7 +39,7 @@ div.section_content {
 	margin: 1vw;
 	text-align: justify;
 	text-justify: inter-word;
-	font-size: 2vh;
+	font-size: 2.3vh;
 }
 
 div.section_content > img {
@@ -47,6 +47,11 @@ div.section_content > img {
 	max-width: 60%;
 	max-height: 80%;
 	float: right;
+}
+
+span.emphasize {
+	color: darkgreen;
+	font-style: italic;
 }
 
 h1.header {
