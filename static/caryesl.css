@@ -102,7 +102,7 @@ header {
 .sidenav a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
-	font-size: 25px;
+	font-size: 5vw;
 	color: #818181;
 	display: block;
 	transition: 0.3s;
@@ -116,7 +116,7 @@ header {
 	position: absolute;
 	top: 0;
 	right: 25px;
-	font-size: 36px;
+	font-size: 10vw;
 	margin-left: 50px;
 }
 
@@ -191,7 +191,7 @@ li a:hover:not(.active) {
 	}
 	div.section_content > img {
 		margin: 1vw;
-		max-width: 100%;
+		max-width: 98%;
 		max-height: 100%;
 		float: none;
 	}

@@ -1,9 +1,9 @@
 function open_nav() {
-	$("#main_side_nav").css("width", "250px");
+	$("#main_side_nav").css("width", "60vw");
 }
 
 function close_nav() {
-	$("#main_side_nav").css("width", "0px");
+	$("#main_side_nav").css("width", "0vw");
 }
 
 function open_section (nav_item)
