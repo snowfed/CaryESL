@@ -30,8 +30,8 @@ div.header {
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	left: 10vw;
-	width: 80vw;
+	left: 20vw;
+	width: 60vw;
 	cursor: pointer;
 }
 
@@ -52,6 +52,7 @@ div.section_content > img {
 span.emphasize {
 	color: darkgreen;
 	font-style: italic;
+	font-weight: bold;
 }
 
 h1.header {
@@ -79,6 +80,29 @@ header, footer {
 
 header {
 	height: 7vh;
+}
+
+button.language {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	background-color: black;
+	color: white;
+	border: 2px solid white;
+	border-radius: 5px;
+	padding: 2px 3px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 3.5vh;
+	cursor: pointer;
+	outline: none;
+}
+
+button.language:hover {
+	background-color: white;
+	color: black;
+	border: 2px solid black;
 }
 
 .mobile_menu {

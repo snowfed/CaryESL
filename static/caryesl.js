@@ -1,33 +1,53 @@
-function open_nav() {
+function open_nav ()
+{
 	$("#main_side_nav").css("width", "60vw");
 }
 
-function close_nav() {
+function close_nav ()
+{
 	$("#main_side_nav").css("width", "0vw");
+}
+
+function switch_language ()
+{
+	var main_section = $("#main_section");
+	main_section.toggleClass("Russian");
+	$("button.language").text(main_section.hasClass("Russian") ? "ENG" : "RUS");
+	var active_page = $("li a.active").attr("id");
+	if (active_page == undefined)
+		return;
+	open_section(active_page);
+}
+
+function open_particular_section (item, page_name, main_section = null)
+{
+	if (main_section == null)
+		main_section = $("#main_section");
+	var ending = (main_section.hasClass("Russian") ? "_rus.html" : ".html");
+	main_section.load("static/" + page_name + ending);
 }
 
 function open_section (nav_item)
 {
-	var main_section = $("#main_section");
 	var item = nav_item.replace("_mobile", "");
 	switch (item) {
 		case "about":
-			main_section.load("static/about.html");
+			open_particular_section(item, "about");
 			break;
 		case "material":
-			main_section.load("static/material.html");
+			open_particular_section(item, "material");
 			break;
 		case "timetable":
-			main_section.load("static/timetable.html");
+			open_particular_section(item, "timetable");
 			break;
 		case "contacts":
-			main_section.load("static/contacts.html");
+			open_particular_section(item, "contacts");
 			break;
 		case "promo":
-			main_section.html("<h1>No promotional offers at the moment...</h1>");
+			$("#main_section").html("<h1>No promotional offers at the moment...</h1>");
 			break;
 		case "test":
-			main_section.html("<h1>Under construction...</h1>");
+			open_particular_section(item, "test");
 			break;
 		default:
 			console.log("Unexpected item in open_section():", item);
