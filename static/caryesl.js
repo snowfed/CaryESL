@@ -13,6 +13,8 @@ function switch_language ()
 	var main_section = $("#main_section");
 	main_section.toggleClass("Russian");
 	$("button.language").text(main_section.hasClass("Russian") ? "ENG" : "RUS");
+	$("div.Russian").toggle();
+	$("div.English").toggle();
 	var active_page = $("li a.active").attr("id");
 	if (active_page == undefined)
 		return;

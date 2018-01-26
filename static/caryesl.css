@@ -35,6 +35,10 @@ div.header {
 	cursor: pointer;
 }
 
+div.Russian {
+	display: none;
+}
+
 div.section_content {
 	margin: 1vw;
 	text-align: justify;
