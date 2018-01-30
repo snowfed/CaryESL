@@ -45,7 +45,7 @@ div.section_content {
 	margin: 1vw;
 	text-align: justify;
 	text-justify: inter-word;
-	font-size: 2.3vh;
+	font-size: 24px;
 }
 
 div.section_content > img {
@@ -57,7 +57,7 @@ div.section_content > img {
 
 span.emphasize {
 	color: darkgreen;
-	font-style: italic;
+	/*font-style: italic;*/
 	font-weight: bold;
 }
 
@@ -246,7 +246,7 @@ nav a:hover:not(.active) {
 	}
 
 	div.section_content	{
-		font-size: 3vh
+		font-size: 28px;
 	}
 
 	div.section_content > img {
