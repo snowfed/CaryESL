@@ -8,9 +8,9 @@ html, body {
 section {
 	position: absolute;
 	left: 20vw;
-	top: 7vh;
+	top: 7.25vh;
 	width: 60vw;
-	height: 93vh;
+	height: 92.75vh;
 	text-align: center;
 	overflow-y: auto;
 }
@@ -32,8 +32,8 @@ div.header {
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	left: 20vw;
-	width: 60vw;
+	left: 17.5vw;
+	width: 67vw;
 	cursor: pointer;
 }
 
@@ -45,7 +45,7 @@ div.section_content {
 	margin: 1vw;
 	text-align: justify;
 	text-justify: inter-word;
-	font-size: 24px;
+	font-size: 1.5rem;
 }
 
 div.section_content > img {
@@ -72,7 +72,7 @@ p.header {
 	margin-top: 0;
 	margin: 0;
 	padding: 0;
-	font-size: 2vh;
+	font-size: 2.5vh;
 }
 
 header, footer {
@@ -85,22 +85,22 @@ header, footer {
 }
 
 header {
-	height: 7vh;
+	height: 7.25vh;
 }
 
 button.language {
 	position: absolute;
-	top: 8px;
-	left: 8px;
+	top: 0.75vh;
+	left: 0.6vw;
 	background-color: black;
 	color: white;
-	border: 2px solid white;
-	border-radius: 5px;
-	padding: 2px 3px;
+	border: 0.25vmin solid white;
+	border-radius: 1vmin;
+	padding: 0.25vw 0.25vh;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 3.5vh;
+	font-size: 4vh;
 	cursor: pointer;
 	outline: none;
 }
@@ -108,14 +108,14 @@ button.language {
 button.language:hover {
 	background-color: white;
 	color: black;
-	border: 2px solid black;
+	border: 0.25vmin solid black;
 }
 
 .mobile_menu {
 	position: absolute;
-	top: 8px;
-	right: 8px;
-	font-size: 4vh;
+	top: 1vh;
+	right: 1.5vw;
+	font-size: 5vh;
 	cursor: pointer;
 	display: none;
 }
@@ -126,7 +126,7 @@ button.language:hover {
 
 nav {
 	width: 20vw;
-	height: 93vh;
+	height: 92.75vh;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -166,12 +166,16 @@ nav a:hover:not(.active) {
 
 @media screen and (max-aspect-ratio: 4/5)
 {
+	button.language {
+		top: 1vh;
+	}
+
 	.sidenav {
-		height: 93vh;
+		height: 92.75vh;
 		width: 0vw;
 		position: fixed;
 		z-index: 1;
-		top: 7vh;
+		top: 7.25vh;
 		right: 0;
 		background-color: #111;
 		overflow-x: hidden;
@@ -243,10 +247,6 @@ nav a:hover:not(.active) {
 
 	.mobile_menu {
 		display: inline;
-	}
-
-	div.section_content	{
-		font-size: 28px;
 	}
 
 	div.section_content > img {
