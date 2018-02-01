@@ -8,11 +8,20 @@ html, body {
 section {
 	position: absolute;
 	left: 20vw;
-	top: 7.25vh;
+	top: 7.5vh;
 	width: 60vw;
-	height: 92.75vh;
+	height: 92.5vh;
 	text-align: center;
 	overflow-y: auto;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: white;
+}
+
+section.wallpaper {
+	background-image: url("/static/caryesl.jpg");
 }
 
 img {
@@ -57,7 +66,6 @@ div.section_content > img {
 
 span.emphasize {
 	color: darkgreen;
-	/*font-style: italic;*/
 	font-weight: bold;
 }
 
@@ -85,7 +93,7 @@ header, footer {
 }
 
 header {
-	height: 7.25vh;
+	height: 7.5vh;
 }
 
 button.language {
@@ -126,7 +134,7 @@ button.language:hover {
 
 nav {
 	width: 20vw;
-	height: 92.75vh;
+	height: 92.5vh;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -171,11 +179,11 @@ nav a:hover:not(.active) {
 	}
 
 	.sidenav {
-		height: 92.75vh;
+		height: 92.5vh;
 		width: 0vw;
 		position: fixed;
 		z-index: 1;
-		top: 7.25vh;
+		top: 7.5vh;
 		right: 0;
 		background-color: #111;
 		overflow-x: hidden;
@@ -247,6 +255,7 @@ nav a:hover:not(.active) {
 	section {
 		left: 0vw;
 		width: 100vw;
+		background-size: cover;
 	}
 
 	.mobile_menu {

@@ -25,6 +25,7 @@ function open_particular_section (item)
 {
 	var main_section = $("#main_section");
 	var ending = (main_section.hasClass("Russian") ? "_rus.html" : ".html");
+	main_section.removeClass("wallpaper");
 	main_section.load("static/" + item + ending);
 }
 
@@ -38,8 +39,9 @@ $(function() {
 	});
 	$("a.closebtn").click(close_nav);
 	$("div.header").click(function() {
-		$("li a").removeClass("active");
+		$("nav a").removeClass("active");
 		var main_section = $("#main_section");
-		main_section.html("<img src='/static/caryesl.jpg'>");
+		main_section.html("");
+		main_section.addClass("wallpaper");
 	});
 });
