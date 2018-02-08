@@ -44,6 +44,12 @@ div.header {
 	left: 17.5vw;
 	width: 67vw;
 	cursor: pointer;
+	background-color: black;
+	color: white;
+}
+
+div.header:hover {
+	color: green;
 }
 
 div.Russian {
@@ -152,7 +158,7 @@ nav a {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	height: 31vh;
+	height: 30.75vh;
 	display: block;
 	background-color: #f1f1f1;
 	color: #000;

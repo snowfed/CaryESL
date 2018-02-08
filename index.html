@@ -10,7 +10,7 @@
 		<script src="/static/caryesl.js"></script>
 	</head>
 
-	<body>
+	<body onhashchange="hashchange_handler()">
 		<div class="container">
 			<header id="main_header">
 				<button class="language" onclick="switch_language()">RUS</button>
@@ -23,29 +23,29 @@
 			<div class="sidenav">
 				<a href="javascript:void(0)" class="closebtn">&times;</a>
 				<nav class="left">
-					<a href="javascript:void(0)" id="about">
+					<a href="#about" id="about">
 						<div class="English">Who is George?</div>
 						<div class="Russian">Кто такой Джордж?</div>
 					</a>
-					<a href="javascript:void(0)" id="material">
+					<a href="#material" id="material">
 						<div class="English">What can I learn?</div>
 						<div class="Russian">Чему я могу научиться?</div>
 					</a>
-					<a href="javascript:void(0)" id="timetable">
+					<a href="#timetable" id="timetable">
 						<div class="English">When can I have lessons?</div>
 						<div class="Russian">В какое время можно заниматься?</div>
 					</a>
 				</nav>
 				<nav class="right">
-					<a href="javascript:void(0)" id="contacts">
+					<a href="#contacts" id="contacts">
 						<div class="English">How can I reach George?</div>
 						<div class="Russian">Как связаться с Джорджем?</div>
 					</a>
-					<a href="javascript:void(0)" id="promo">
+					<a href="#promo" id="promo">
 						<div class="English">How can I save money?</div>
 						<div class="Russian">Как сэкономить?</div>
 					</a>
-					<a href="javascript:void(0)" id="test">
+					<a href="#test" id="test">
 						<div class="English">How good is my English?</div>
 						<div class="Russian">Насколько хорош мой английский?</div>
 					</a>

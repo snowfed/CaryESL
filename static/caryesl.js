@@ -8,6 +8,34 @@ function close_nav ()
 	$("div.sidenav").removeClass("open");
 }
 
+function open_section (item)
+{
+	$("nav a").removeClass("active");
+	$("#"+item).addClass("active");
+	var main_section = $("#main_section");
+	var ending = (main_section.hasClass("Russian") ? "_rus.html" : ".html");
+	main_section.removeClass("wallpaper");
+	main_section.load("static/" + item + ending);
+	close_nav();
+}
+
+function load_wallpaper ()
+{
+	$("nav a").removeClass("active");
+	var main_section = $("#main_section");
+	main_section.html("");
+	main_section.addClass("wallpaper");
+	history.replaceState({}, document.title, ".");
+}
+
+function hashchange_handler ()
+{
+	if (window.location.hash.length > 1)
+		open_section(window.location.hash.substr(1));
+	else
+		load_wallpaper();
+}
+
 function switch_language ()
 {
 	var main_section = $("#main_section");
@@ -18,30 +46,14 @@ function switch_language ()
 	var active_page = $("nav a.active").attr("id");
 	if (active_page == undefined)
 		return;
-	open_particular_section(active_page);
-}
-
-function open_particular_section (item)
-{
-	var main_section = $("#main_section");
-	var ending = (main_section.hasClass("Russian") ? "_rus.html" : ".html");
-	main_section.removeClass("wallpaper");
-	main_section.load("static/" + item + ending);
+	hashchange_handler();
 }
 
 $(function() {
-	$("nav a").click(function() {
-		$("nav a").removeClass("active");
-		$(this).addClass("active");
-		var nav_item = $(this).attr("id");
-		open_particular_section(nav_item);
-		close_nav();
-	});
+	hashchange_handler();
 	$("a.closebtn").click(close_nav);
 	$("div.header").click(function() {
-		$("nav a").removeClass("active");
-		var main_section = $("#main_section");
-		main_section.html("");
-		main_section.addClass("wallpaper");
+		if (window.location.hash.length > 1)
+			load_wallpaper();
 	});
 });
