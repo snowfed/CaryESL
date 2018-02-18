@@ -52,8 +52,5 @@ function switch_language ()
 $(function() {
 	hashchange_handler();
 	$("a.closebtn").click(close_nav);
-	$("div.header").click(function() {
-		if (window.location.hash.length > 1)
-			load_wallpaper();
-	});
+	$("a.home_icon").click(close_nav);
 });

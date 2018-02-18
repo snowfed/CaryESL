@@ -36,7 +36,7 @@ div.container {
 	height: 100%;
 }
 
-div.header {
+a.header {
 	margin-top: 0;
 	margin: 0;
 	padding: 0;
@@ -46,10 +46,11 @@ div.header {
 	cursor: pointer;
 	background-color: black;
 	color: white;
+	text-decoration: none;
 }
 
-div.header:hover {
-	color: green;
+a.header:hover {
+	color: lightgray;
 }
 
 div.Russian {
@@ -75,14 +76,14 @@ span.emphasize {
 	font-weight: bold;
 }
 
-h1.header {
+a.header > h1 {
 	margin-top: 0;
 	margin: 0;
 	padding: 0;
 	font-size: 4vh;
 }
 
-p.header {
+a.header > p {
 	margin-top: 0;
 	margin: 0;
 	padding: 0;
@@ -100,6 +101,31 @@ header, footer {
 
 header {
 	height: 7.5vh;
+}
+
+a.home_icon {
+	position: absolute;
+	top: 0.75vh;
+	right: 0.6vw;
+	color: white;
+	font-size: 4vh;
+}
+
+a.home_icon > img {
+	filter: invert(100%);
+	width: auto;
+	height: 5.5vh;
+	border: 0.25vmin solid black;
+	border-radius: 1vmin;
+	background-color: white;
+}
+
+a.home_icon > img:hover {
+	filter: invert(0%);
+}
+
+a.home_icon > div {
+	display: none;
 }
 
 button.language {
@@ -209,6 +235,26 @@ nav a:hover:not(.active) {
 
 	.sidenav.open {
 		width: 60vw;
+	}
+
+	a.home_icon {
+		position: static;
+		top: auto;
+		right: auto;
+		color: #818181;
+		font-size: 5vw;
+	}
+
+	a.home_icon > img {
+		display: none;
+	}
+
+	a.home_icon > div {
+		display: block;
+	}
+
+	a.home_icon > div:hover {
+		color: #f1f1f1;
 	}
 
 	nav {
