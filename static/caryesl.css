@@ -44,7 +44,7 @@ a.header {
 	left: 17.5vw;
 	width: 67vw;
 	cursor: pointer;
-	background-color: black;
+	background-color: none;
 	color: white;
 	text-decoration: none;
 }
