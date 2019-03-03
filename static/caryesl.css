@@ -73,13 +73,13 @@ div.section_content > img {
 
 div.left {
 	float: left;
-	width: 75%;
+	width: 50%;
 	overflow: hidden;
 }
 
 div.right {
 	float: left;
-	width: 25%;
+	width: 50%;
 	overflow: hidden;
 }
 
