@@ -71,6 +71,18 @@ div.section_content > img {
 	float: right;
 }
 
+div.left {
+	float: left;
+	width: 75%;
+	overflow: hidden;
+}
+
+div.right {
+	float: left;
+	width: 25%;
+	overflow: hidden;
+}
+
 span.emphasize {
 	color: darkgreen;
 	font-weight: bold;
