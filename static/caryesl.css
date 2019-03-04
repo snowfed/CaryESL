@@ -71,21 +71,21 @@ div.section_content > img {
 	float: right;
 }
 
-div.left {
-	float: left;
-	width: 50%;
-	overflow: hidden;
-}
-
-div.right {
-	float: left;
-	width: 50%;
-	overflow: hidden;
-}
-
 span.emphasize {
 	color: darkgreen;
 	font-weight: bold;
+}
+
+div.section_content > table {
+	border-spacing: 10px 3px;
+}
+
+div.section_content > table > tr:first-child {
+	line-height: 3px;
+}
+
+div.section_content > table > tr > td:not(:first-child) {
+	text-align: center;
 }
 
 a.header > h1 {
