@@ -78,14 +78,17 @@ span.emphasize {
 
 div.section_content > table {
 	border-spacing: 10px 3px;
-}
-
-div.section_content > table > tr:first-child {
-	line-height: 3px;
-}
-
-div.section_content > table > tr > td:not(:first-child) {
+	border: 3px solid lightgray;
+	border-collapse: collapse;
 	text-align: center;
+}
+
+tr:nth-child(even) {
+	background-color: lightgray;
+}
+
+tr:hover {
+	background-color: lightgreen;
 }
 
 a.header > h1 {
